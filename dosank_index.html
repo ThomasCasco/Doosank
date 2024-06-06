@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./src/img/favicon-16x16.png" type="image/x-icon">
     <style>
         :root {
             --primary-color: #0D1B2A;
@@ -52,11 +54,24 @@
     </style>
 </head>
 <body class="bg-background text-primary">
+    
+     <!-- Loader -->
+     <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+        <div class="text-center animate-pulse">
+            <img src="src/img/DOOSANK.png" alt="Doosank Logo" class="h-32 mx-auto">
+            <div class="mt-4">
+                <div class="w-16 h-16 border-4 border-t-4 border-primary rounded-full animate-spin"></div>
+            </div>
+        </div>
+    </div>
 
     <header class="bg-header text-white py-4">
         <div class="container mx-auto flex justify-between items-center px-16">
             <img src="src/img/DOOSANK.png" alt="Doosank Logo" class="h-32">
-            <a href="" class="text-lg font-semibold hover:underline"><img src="./src/img/klipartz.com.png" class="h-12" alt="WhatsApp-icon"></a>
+            <!-- <a href="https://wa.me/1133349849?text=¡Hola! Me interesa el Producto 1" class="text-lg font-semibold hover:underline"><img src="./src/img/klipartz.com.png" class="h-12" alt="WhatsApp-icon"></a> -->
+            <a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">
+                <i class="fab fa-whatsapp text-6xl"></i> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+            </a>
         </div>
     </header>
 
@@ -111,37 +126,86 @@
             <h2 class="text-5xl font-bold mb-4"><button class="btn">
                 Nuestros Productos
               </button></h2>
-            <a href="productos.html" class="text-accent hover:underline"><img src="./src/img/doosank_venta.png" alt="fdsf" srcset=""></a>
+              <div class="card">
+                  <a href="productos.html" class="text-accent hover:underline"><img src="./src/img/doosank_venta.png" alt="fdsf" srcset=""></a>
+              </div>
         </section>
 
        
     </main>
 
-    <footer class="bg-header text-white py-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Doosank. Todos los derechos reservados. Realizado por Thomas Casco</p>
+    <footer class="bg-header text-white py-8">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-between">
+            <!-- Logo y Descripción -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+              <h2 class="text-2xl font-bold mb-4">Doosank</h2>
+              <p class="text-gray-400">Especialistas en gas, mantenimiento post venta, venta de equipos de gas, expertos en la materia.</p>
+            </div>
+            
+            <!-- Enlaces útiles -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+              <h3 class="text-xl font-semibold mb-4">Enlaces útiles</h3>
+              <ul class="space-y-2">
+                <li><a href="dosank_index.html" class="text-gray-400 hover:text-gray-200 transition">Inicio</a></li>
+                <li><a href="productos.html" class="text-gray-400 hover:text-gray-200 transition">Productos</a></li>
+                <li><a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">Contacto</a></li>
+              </ul>
+            </div>
+      
+           <!-- Redes Sociales -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+                <div class="flex flex-col space-y-4">
+                <a href="https://www.instagram.com" class="text-gray-400 hover:text-gray-200 transition">
+                    <i class="fab fa-instagram text-2xl"></i><p>instagram</p> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+                </a>
+                <a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">
+                    <i class="fab fa-whatsapp text-2xl"></i><p>WhatsApp</p> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+                </a>
+                </div>
+            </div>
+
+      
+            <!-- Suscripción al boletín -->
+            <div class="w-full md:w-1/4">
+              <h3 class="text-xl font-semibold mb-4">Suscríbete</h3>
+              <p class="text-gray-400 mb-4">Recibe las últimas noticias y actualizaciones directamente en tu bandeja de entrada.</p>
+              <form action="#">
+                <input type="email" placeholder="Tu email" class="w-full p-2 rounded mb-2 text-gray-800">
+                <button type="submit" class="w-full bg-primary text-white p-2 rounded hover:bg-primary-dark transition">Suscribirse</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Derechos de autor -->
+          <div class="text-center text-gray-500 mt-8">
+            &copy; 2024 Doosank. Todos los derechos reservados.
+          </div>
         </div>
-    </footer>
+      </footer>
 
     <script>
-        // Script para controlar el carrusel de imágenes
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+        const loader = document.getElementById('loader');
+        
+        // Hide loader after page load
+        window.addEventListener('load', function() {
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500); // match the transition duration
+        });
 
-        const showItem = (index) => {
-            carouselItems.forEach((item, i) => {
-                if (i === index) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
+        // Show loader on link clicks
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                loader.style.display = 'flex';
+                loader.style.opacity = '1';
+                });
             });
-        };
-
-        setInterval(() => {
-            currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-            showItem(currentIndex);
-        }, 3000); // Cambiar de imagen cada 3 segundos
+        });
     </script>
 </body>
 </html>
