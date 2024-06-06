@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doosank</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./src/img/favicon-16x16.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #0D1B2A;
+            --secondary-color: #1B263B;
+            --accent-color: #415A77;
+            --light-accent-color: #778DA9;
+            --background-color: #E0E1DD;
+        }
+
+        .bg-primary { background-color: var(--primary-color); }
+        .bg-secondary { background-color: var(--secondary-color); }
+        .bg-accent { background-color: var(--accent-color); }
+        .bg-light-accent { background-color: var(--light-accent-color); }
+        .bg-background { background-color: var(--background-color); }
+        .text-primary { color: var(--primary-color); }
+        .text-secondary { color: var(--secondary-color); }
+        .text-accent { color: var(--accent-color); }
+        .text-light-accent { color: var(--light-accent-color); }
+        .text-background { color: var(--background-color); }
+        .bg-header { background-color: #070C10; }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel-item {
+            display: none;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-background text-primary">
+    
+     <!-- Loader -->
+     <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+        <div class="text-center animate-pulse">
+            <img src="src/img/DOOSANK.png" alt="Doosank Logo" class="h-32 mx-auto">
+            <div class="mt-4">
+                <div class="w-16 h-16 border-4 border-t-4 border-primary rounded-full animate-spin"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-header text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-16">
+            <img src="src/img/DOOSANK.png" alt="Doosank Logo" class="h-32">
+            <!-- <a href="https://wa.me/1133349849?text=¡Hola! Me interesa el Producto 1" class="text-lg font-semibold hover:underline"><img src="./src/img/klipartz.com.png" class="h-12" alt="WhatsApp-icon"></a> -->
+            <a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">
+                <i class="fab fa-whatsapp text-6xl"></i> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+        
+        <section class="card">
+            <img src="./src/img/Doosank Servicios de venta.png" alt="" srcset="">
+        </section>
+        <section class="mb-8 text-center">
+            <h2 class="text-3xl font-bold mb-4 mt-4"><button class="btn">
+                Nuestros Servicios
+              </button></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                <div class="card bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Instalaciones</h3>
+                        <p class="text-gray-700">Realizamos instalaciones de calefacción de forma rápida y eficiente.</p>
+                    </div>
+                    <img src="./src/img/2.png" alt="Instalaciones" class="mt-4 rounded-lg h-48 sm:h-auto w-full object-cover">
+                </div>
+                <div class="card bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Reparaciones</h3>
+                        <p class="text-gray-700">Reparamos cualquier tipo de avería en sistemas de calefacción.</p>
+                    </div>
+                    <!-- Aquí puedes poner la imagen para Reparaciones -->
+                    <img src="./src/img/3.png" alt="Reparaciones" class="mt-4 rounded-lg h-48 sm:h-auto w-full object-cover">
+                </div>
+                <div class="card bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Compra y Venta</h3>
+                        <p class="text-gray-700">Realizamos compra y venta de productos.</p>
+                    </div>
+                    <!-- Aquí puedes poner la imagen para Compra y Venta -->
+                    <img src="./src/img/4.png" alt="Compra y Venta" class="mt-4 rounded-lg h-48 sm:h-auto w-full object-cover">
+                </div>
+                <div class="card bg-white p-4 rounded-lg shadow-md flex flex-col justify-between cardBoard">
+                    <div class="cardBoard2">
+                        <h3 class="text-xl font-semibold mb-2">Mantenimiento</h3>
+                        <p class="text-gray-700">Realizamos servicio de mantenimiento, a todos los dispositivos de su hogar.</p>
+                    </div>
+                    <!-- Aquí puedes poner la imagen para Mantenimiento -->
+                    <img src="./src/img/5.png" alt="Compra y Venta" class="mt-4 rounded-lg h-48 sm:h-auto w-full object-cover">
+                </div>
+                
+            </div>
+        </section>
+        
+        
+
+        <section class="mb-8 text-center">
+            <h2 class="text-5xl font-bold mb-4"><button class="btn">
+                Nuestros Productos
+              </button></h2>
+              <div class="card">
+                  <a href="productos.html" class="text-accent hover:underline"><img src="./src/img/doosank_venta.png" alt="fdsf" srcset=""></a>
+              </div>
+        </section>
+
+       
+    </main>
+
+    <footer class="bg-header text-white py-8">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-between">
+            <!-- Logo y Descripción -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+              <h2 class="text-2xl font-bold mb-4">Doosank</h2>
+              <p class="text-gray-400">Especialistas en gas, mantenimiento post venta, venta de equipos de gas, expertos en la materia.</p>
+            </div>
+            
+            <!-- Enlaces útiles -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+              <h3 class="text-xl font-semibold mb-4">Enlaces útiles</h3>
+              <ul class="space-y-2">
+                <li><a href="index.html" class="text-gray-400 hover:text-gray-200 transition">Inicio</a></li>
+                <li><a href="productos.html" class="text-gray-400 hover:text-gray-200 transition">Productos</a></li>
+                <li><a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">Contacto</a></li>
+              </ul>
+            </div>
+      
+           <!-- Redes Sociales -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+                <div class="flex flex-col space-y-4">
+                <a href="https://www.instagram.com" class="text-gray-400 hover:text-gray-200 transition">
+                    <i class="fab fa-instagram text-2xl"></i><p>instagram</p> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+                </a>
+                <a href="https://wa.me/1133349849" class="text-gray-400 hover:text-gray-200 transition">
+                    <i class="fab fa-whatsapp text-2xl"></i><p>WhatsApp</p> <!-- Se agrega text-2xl para aumentar el tamaño del ícono -->
+                </a>
+                </div>
+            </div>
+
+      
+            <!-- Suscripción al boletín -->
+            <div class="w-full md:w-1/4">
+              <h3 class="text-xl font-semibold mb-4">Suscríbete</h3>
+              <p class="text-gray-400 mb-4">Recibe las últimas noticias y actualizaciones directamente en tu bandeja de entrada.</p>
+              <form action="#">
+                <input type="email" placeholder="Tu email" class="w-full p-2 rounded mb-2 text-gray-800">
+                <button type="submit" class="w-full bg-primary text-white p-2 rounded hover:bg-primary-dark transition">Suscribirse</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Derechos de autor -->
+          <div class="text-center text-gray-500 mt-8">
+            &copy; 2024 Doosank. Todos los derechos reservados.
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const loader = document.getElementById('loader');
+        
+        // Hide loader after page load
+        window.addEventListener('load', function() {
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500); // match the transition duration
+        });
+
+        // Show loader on link clicks
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                loader.style.display = 'flex';
+                loader.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
